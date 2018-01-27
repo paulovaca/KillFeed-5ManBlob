@@ -6,18 +6,18 @@
 module.exports = {
   discord: {
     // The Discord token of the Bot to post through.
-    token: "NDA2NDM0Mzg0NjQ4OTk0ODE2.DU5Oeg.VM_QpEphsj4cHSXKZ8GLFHD8gRU",
+    token: process.env.DISCORD_TOKEN,
     // The ID of the discord channel to post battleboard infos to.
-    feedChannelId: "406278182283640842",
+    feedChannelId: process.env.ALBION_FEED_CHANNEL_ID,
     // The ID of the discord channel to post albion status infos to.
-    statusChannelId: "406278182283640842",
+    statusChannelId: process.env.ALBION_STATUS_CHANNEL_ID
   },
   guild: {
     // The name of your guild (or guilds, if the guild is large).
-    guilds: "5Man Blob"
-    ? "5Man Blob".split(',') : [],
+    guilds: process.env.ALBION_GUILDS
+    ? process.env.ALBION_GUILDS.split(',') : [],
     // The alliance your guild belongs to
-    alliance:"EVER"
+    alliance: process.env.ALBION_ALLIANCE
   },
   battle: {
     // Min players to report as battle
